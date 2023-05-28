@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFD84C2F-E527-49C7-BC26-920FCE90C086}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OpenCV_Image_Template_Mathing</RootNamespace>
+    <AssemblyName>OpenCV_Image_Template_Mathing</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.7.0.20230115\lib\netstandard2.0\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\137.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\139.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\146.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\160.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\165.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\167.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\168.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2053.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2055.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2065.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2066.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2081.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2085.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2087.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2088.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\21.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2105.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2108.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2111.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2117.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2118.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2119.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2128.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\2148.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\300.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\301.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\31.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\311.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\312.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\313.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\314.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\315.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\316.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\317.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\318.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\319.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\320.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\321.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\33.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\330.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\41.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\42.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\436.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\437.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\438.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\439.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\440.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\441.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\442.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\443.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\444.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\445.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\446.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\536.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\537.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\553.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\557.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\606.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\607.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\608.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\609.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\610.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\611.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\612.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\613.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\614.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\615.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\616.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\634.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\635.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\636.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\637.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\638.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\639.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\640.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\641.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\642.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\643.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\644.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\645.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\646.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\647.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\648.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\649.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\650.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\651.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\652.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\653.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\654.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\655.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\656.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\657.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\658.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\659.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\660.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\661.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\662.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\663.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\664.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\665.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\666.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\667.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\668.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\669.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\670.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\671.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\672.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\673.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\674.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\675.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\676.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\677.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\678.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\679.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\680.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\681.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\682.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\683.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\684.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\685.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\686.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\687.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\688.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\689.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\690.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\691.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\692.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\693.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\694.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\695.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\696.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\697.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\698.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\699.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\700.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\701.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\702.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\703.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\704.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\705.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\706.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\707.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\708.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\709.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\710.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\711.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\712.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\713.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\714.png" />
+    <Content Include="ALGORTIMA_ANALIZI_ODEV_SOURCES\ALGORTIMA_ANALIZI_ODEV_SOURCES\715.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
